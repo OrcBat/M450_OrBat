@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "10f07d99-05f7-475c-9fc4-80bb0267589a",
+		"name": "M450",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body is valid JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response body is valid JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains 5 students\", function () {\r",
+							"    const responseBody = pm.response.json();\r",
+							"    pm.expect(responseBody).to.be.an('array').with.lengthOf(5);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Jonas is in the response\", function () {\r",
+							"    const responseBody = pm.response.json();\r",
+							"    pm.expect(responseBody).to.deep.include({ \"id\": 1, \"name\": \"Jonas\", \"email\": \"jonas@tbz.ch\" });\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Patrick is in the response\", function () {\r",
+							"    const responseBody = pm.response.json();\r",
+							"    pm.expect(responseBody).to.deep.include({ \"id\": 2, \"name\": \"Patrick\", \"email\": \"patrick@tbz.ch\" });\r",
+							"});\r",
+							"\r",
+							"// Add similar tests for other students as needed\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/students",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add Student",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// POST Request to localhost:8081/students\r",
+							"pm.sendRequest({\r",
+							"    url: 'http://localhost:8081/students',\r",
+							"    method: 'POST',\r",
+							"    header: 'Content-Type:application/json',\r",
+							"    body: {\r",
+							"        mode: 'raw',\r",
+							"        raw: JSON.stringify({\r",
+							"            \"name\": \"New Student\",\r",
+							"            \"email\": \"newstudent@tbz.ch\"\r",
+							"        })\r",
+							"    }\r",
+							"}, function (response) {\r",
+							"    pm.test(\"Status code is 200 (Created)\", function () {\r",
+							"        pm.response.to.have.status(200);\r",
+							"    });\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"New Student\",\r\n    \"email\": \"newstudent@tbz.ch\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
