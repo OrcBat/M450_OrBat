@@ -7,7 +7,7 @@ import java.util.*;
  * @author  Roger H. J&ouml;rg
  * @version  1.0
  */
-public abstract class Account
+public class Account
 {
 	/**
 	 * Die Kontonummer (kann auch Buchstaben und Sonderzeichen enthalten).
@@ -121,7 +121,7 @@ public abstract class Account
 	public void print()
 	{
 		System.out.println("Kontoauszug '" + id + "'");
-		System.out.println("Datum          Betrag      Saldo");
+		System.out.println("Datum:  Betrag:  Saldo:  ");
 
 	    long balance = 0;
 
@@ -187,5 +187,13 @@ public abstract class Account
 	 */
 	public void setBooking(Booking booking) {
 		this.booking = booking;
+	}
+
+	public ArrayList<Booking> getBookings() {
+		return bookings;
+	}
+
+	public void setBookings(ArrayList<Booking> bookings) {
+		this.bookings = bookings;
 	}
 }
