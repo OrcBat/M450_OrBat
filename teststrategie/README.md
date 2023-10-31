@@ -25,19 +25,18 @@
 
 ## Übung 2
 ## Testfall Testergebnis
-
-| Anmeldung und Registrierung    |
-| ------------------------------ |
-| Suche nach verfügbaren Autos   |
-| Buchung eines Autos            |
-| Stornierung einer Buchung      |
-| Zahlungsabwicklung             |
-| Profilverwaltung               |
-| Benachrichtigungen und E-Mails |
-| Bewertung und Feedback         |
-| Fahrzeugabholung und -rückgabe |
-| Kundensupport                  |
-
+| Testfall-Nummer | Testfall                       | Testbeschreibung             | Erwartetes Ergebnis   |
+| --------------- | ------------------------------ | ---------------------------- | --------------------- |
+| 1               | Anmeldung                      | Gültige Anmeldedaten         | Erfolgreiche Anmeldung |
+| 2               | Registrierung                  | Neue Benutzerdaten           | Bestätigungs-E-Mail   |
+| 3               | Suche nach verfügbaren Autos   | Ort, Zeitpunkt               | Liste verfügbarer Autos |
+| 4               | Buchung eines Autos            | Autoauswahl, Buchungsdetails | Buchungsbestätigung   |
+| 5               | Stornierung einer Buchung      | Bestehende Buchungs-ID       | Stornierung, Rückerstattung |
+| 6               | Zahlungsabwicklung             | Zahlungsdetails              | Zahlungsbestätigung   |
+| 7               | Profilverwaltung               | Änderung von Benutzerdetails | Änderungen gespeichert |
+| 8               | Benachrichtigungen und E-Mails | Buchung, Stornierung         | Korrekte Benachrichtigungen |
+| 9               | Fahrzeugabholung und -rückgabe | Abhol- und Rückgabeinformationen | Klare Informationen |
+| 10              | Kundensupport                  | Kontaktformular              | Bestätigungs-E-Mail   |
 
 ## Übung 3
 <ul>
