@@ -15,12 +15,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@ExtendWith(MockitoExtension.class)
 class AddressViewControllerTest {
 
     private AddressViewController addressViewController;
 
-    @Mock
     private AddressService addressService;
 
     @BeforeEach

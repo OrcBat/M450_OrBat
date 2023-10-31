@@ -22,14 +22,16 @@ class LastnameFirstnameRegistrationDateComparatorTest {
 
     @Test
     void testCompareByLastname() {
-        assertFalse(comparator.compare(address1, address2) < 0);
+        assertTrue(comparator.compare(address1, address2) < 0);
+        assertTrue(comparator.compare(address2, address1) > 0);
     }
 
     @Test
     void testCompareByFirstname() {
         address1.setLastname("Smith");
         address2.setLastname("Smith");
-        assertFalse(comparator.compare(address1, address2) < 0);
+        assertTrue(comparator.compare(address1, address2) > 0);
+        assertTrue(comparator.compare(address2, address1) < 0);
     }
 
     @Test
@@ -38,6 +40,7 @@ class LastnameFirstnameRegistrationDateComparatorTest {
         address2.setLastname("Smith");
         address1.setFirstname("Jane");
         address2.setFirstname("Jane");
-        assertFalse(comparator.compare(address1, address2) < 0);
+        assertTrue(comparator.compare(address1, address2) < 0);
+        assertTrue(comparator.compare(address2, address1) > 0);
     }
 }
