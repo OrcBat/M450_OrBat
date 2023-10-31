@@ -1,0 +1,23 @@
+
+t
+java:S2293&"YReplace the type specification in this constructor call with the diamond operator ("<>").(ëÉÙÎüÿÿÿÿ
+Œ
+java:S1319À"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‡ğß¡úÿÿÿÿ
+„
+java:S1319Ä"hThe type of "bookings" should be an interface such as "List" rather than the implementation "ArrayList".(œ£ÿüÿÿÿÿ
+\
+java:S3973V"GUse indentation to denote the code conditionally executed by this "if".(¶›Ê
+@
+java:S1905B"*Remove this unnecessary cast to "Booking".(¢Æİ
+N	java:S106{"9Replace this use of System.out or System.err by a logger.(Æãà¼
+S	java:S106|"9Replace this use of System.out or System.err by a logger.(½èÆùşÿÿÿÿ
+Q
+java:S1117~";Rename "balance" which hides the field declared at line 22.(òÖÁ×
+A
+java:S1905‚"*Remove this unnecessary cast to "Booking".(‰ïô
+O	java:S106‘"9Replace this use of System.out or System.err by a logger.(Ë¥ëº
+O	java:S106“"9Replace this use of System.out or System.err by a logger.(É¢¡¿
+R
+java:S1117˜";Rename "balance" which hides the field declared at line 22.(òÖÁ×
+A
+java:S1905œ"*Remove this unnecessary cast to "Booking".(‰ïô
