@@ -7,9 +7,13 @@ import java.util.List;
 
 @Controller
 public class AddressViewController {
-	
-	@Autowired
-	private AddressService addressService;
+
+    @Autowired
+    private AddressService addressService;
+
+    public void setAddressService(AddressService addressService) {
+        this.addressService = addressService;
+    }
 	
     private String firstname;
     private String lastname;

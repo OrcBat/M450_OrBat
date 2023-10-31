@@ -6,6 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.Arrays;
@@ -19,12 +20,16 @@ class AddressViewControllerTest {
 
     private AddressViewController addressViewController;
 
+
+    @Autowired
     private AddressService addressService;
+
 
     @BeforeEach
     public void setUp() {
         addressService = Mockito.mock(AddressService.class);
         addressViewController = new AddressViewController();
+        addressViewController.setAddressService(addressService);
     }
 
     @Test
@@ -44,7 +49,7 @@ class AddressViewControllerTest {
         addressViewController.setFirstname("Bomba");
         addressViewController.setLastname("Bumba");
         addressViewController.saveAddress();
-
         verify(addressService, times(1)).registerAddress(any(Address.class));
     }
+
 }
